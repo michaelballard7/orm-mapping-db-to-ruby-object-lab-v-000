@@ -36,12 +36,12 @@ class Student
     end.first
   end
 
-  def self.all_students_in_grade_9(grade)
+  def self.all_students_in_grade_9
     sql = <<-SQL
-        SELECT * FROM students
-        WHERE grade = ?
+        SELECT COUNT(*) FROM students
+        WHERE grade = 9
     SQL
-    DB[:conn].execute(sql, grade).map do |row|
+    DB[:conn].execute(sql).map do |row|
         self.new_from_db(row)
     end
   end
