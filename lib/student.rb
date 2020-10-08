@@ -27,7 +27,7 @@ class Student
     # return a new instance of the Student class
 
     sql = <<-SQL
-        SELECT * FROM students 
+        SELECT * FROM students
         WHERE name = ?
     SQL
     DB[:conn].execute(sql, self.name)
@@ -60,5 +60,5 @@ class Student
   end
 
 
-  
+
 end
