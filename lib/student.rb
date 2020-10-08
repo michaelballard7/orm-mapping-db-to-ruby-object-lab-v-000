@@ -23,7 +23,7 @@ class Student
         Student.new_from_db(row)
     end
     # iterate over return value and make an object
-    
+
   end
 
   def self.find_by_name(name)
